@@ -1,23 +1,38 @@
 {
   "files": {
-    "main.css": "/digi-lucky-wheel-app/static/css/main.523f09c5.chunk.css",
-    "main.js": "/digi-lucky-wheel-app/static/js/main.92fbd2bc.chunk.js",
-    "main.js.map": "/digi-lucky-wheel-app/static/js/main.92fbd2bc.chunk.js.map",
+    "main.css": "/digi-lucky-wheel-app/static/css/main.e40f7498.chunk.css",
+    "main.js": "/digi-lucky-wheel-app/static/js/main.13497b28.chunk.js",
+    "main.js.map": "/digi-lucky-wheel-app/static/js/main.13497b28.chunk.js.map",
     "runtime-main.js": "/digi-lucky-wheel-app/static/js/runtime-main.5dc8f6ca.js",
     "runtime-main.js.map": "/digi-lucky-wheel-app/static/js/runtime-main.5dc8f6ca.js.map",
-    "static/js/2.27c21f52.chunk.js": "/digi-lucky-wheel-app/static/js/2.27c21f52.chunk.js",
-    "static/js/2.27c21f52.chunk.js.map": "/digi-lucky-wheel-app/static/js/2.27c21f52.chunk.js.map",
+    "static/css/2.fc5a9450.chunk.css": "/digi-lucky-wheel-app/static/css/2.fc5a9450.chunk.css",
+    "static/js/2.98281992.chunk.js": "/digi-lucky-wheel-app/static/js/2.98281992.chunk.js",
+    "static/js/2.98281992.chunk.js.map": "/digi-lucky-wheel-app/static/js/2.98281992.chunk.js.map",
     "index.html": "/digi-lucky-wheel-app/index.html",
-    "precache-manifest.6202ebac714783671afac2d6a6ac9095.js": "/digi-lucky-wheel-app/precache-manifest.6202ebac714783671afac2d6a6ac9095.js",
+    "precache-manifest.2fcb8525e36337586c9f7ddc0b451a01.js": "/digi-lucky-wheel-app/precache-manifest.2fcb8525e36337586c9f7ddc0b451a01.js",
     "service-worker.js": "/digi-lucky-wheel-app/service-worker.js",
-    "static/css/main.523f09c5.chunk.css.map": "/digi-lucky-wheel-app/static/css/main.523f09c5.chunk.css.map",
-    "static/js/2.27c21f52.chunk.js.LICENSE.txt": "/digi-lucky-wheel-app/static/js/2.27c21f52.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/digi-lucky-wheel-app/static/media/logo.ee7cd8ed.svg"
+    "static/css/2.fc5a9450.chunk.css.map": "/digi-lucky-wheel-app/static/css/2.fc5a9450.chunk.css.map",
+    "static/css/main.e40f7498.chunk.css.map": "/digi-lucky-wheel-app/static/css/main.e40f7498.chunk.css.map",
+    "static/js/2.98281992.chunk.js.LICENSE.txt": "/digi-lucky-wheel-app/static/js/2.98281992.chunk.js.LICENSE.txt",
+    "static/media/100k.png": "/digi-lucky-wheel-app/static/media/100k.b5905a28.png",
+    "static/media/10k.png": "/digi-lucky-wheel-app/static/media/10k.8da54e5b.png",
+    "static/media/1k.png": "/digi-lucky-wheel-app/static/media/1k.def6a991.png",
+    "static/media/200k.png": "/digi-lucky-wheel-app/static/media/200k.ed753f96.png",
+    "static/media/20k.png": "/digi-lucky-wheel-app/static/media/20k.3af80439.png",
+    "static/media/500k.png": "/digi-lucky-wheel-app/static/media/500k.3e248f99.png",
+    "static/media/50k.png": "/digi-lucky-wheel-app/static/media/50k.b684f35f.png",
+    "static/media/5k.png": "/digi-lucky-wheel-app/static/media/5k.fb788b45.png",
+    "static/media/App.css": "/digi-lucky-wheel-app/static/media/contro.4eddcc68.png",
+    "static/media/controtat.png": "/digi-lucky-wheel-app/static/media/controtat.ae07809a.png",
+    "static/media/header.png": "/digi-lucky-wheel-app/static/media/header.9d3ebe9a.png",
+    "static/media/minh-beta-nghe-an-tv.mp3": "/digi-lucky-wheel-app/static/media/minh-beta-nghe-an-tv.926c1f63.mp3",
+    "static/media/votay.mp3": "/digi-lucky-wheel-app/static/media/votay.8b7b9dfb.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.5dc8f6ca.js",
-    "static/js/2.27c21f52.chunk.js",
-    "static/css/main.523f09c5.chunk.css",
-    "static/js/main.92fbd2bc.chunk.js"
+    "static/css/2.fc5a9450.chunk.css",
+    "static/js/2.98281992.chunk.js",
+    "static/css/main.e40f7498.chunk.css",
+    "static/js/main.13497b28.chunk.js"
   ]
 }
