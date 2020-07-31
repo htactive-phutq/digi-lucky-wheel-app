@@ -1,7 +1,52 @@
+@import "~antd/dist/antd.css";
+
 .App {
-  text-align: center;
+  /* display: flex;
+  justify-content: center; */
+  background: url("./img/background.jpg") no-repeat fixed center;
+  background-position: center center;
+  background-size: cover;
+  font-size: 30px;
+  color: white;
+}
+.topheader {
+  position: absolute;
+  left: 45vw;
+  top: 10vh;
 }
 
+.inputValue {
+  position: absolute;
+  left: 10vw;
+  top: 40vh;
+}
+.vongquay {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.nutbatdau {
+  background-image: url("./img/contro.png");
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  z-index: 99;
+}
+.nutquay {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.responsive {
+  width: 200px;
+  height: 150px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -34,5 +79,59 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .topheader {
+      left: 42vw;
+      top: 1vh;
+  }
+  .inputValue {
+    left: 10vw;
+    top: 43vh;
+  }
+  .responsive {
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .topheader {
+      left: 40vw;
+      top: 7vh;
+  }
+  .inputValue {
+    left: 3vw;
+    top: 43vh;
+  }
+  .responsive {
+    width: 180px;
+    height: 160px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .topheader {
+      left: 37vw;
+      top: 0vh;
+  }
+  .inputValue {
+    left: 34vw;
+    top: 89vh;
+  }
+  .responsive {
+    width: 160px;
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .topheader {
+      left: 28vw;
+  }
+  .inputValue {
+    left: 21vw;
+    top: 81vh;
   }
 }
