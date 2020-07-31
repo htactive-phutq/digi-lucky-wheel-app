@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/digi-lucky-wheel-app/static/css/main.523f09c5.chunk.css",
+    "main.js": "/digi-lucky-wheel-app/static/js/main.92fbd2bc.chunk.js",
+    "main.js.map": "/digi-lucky-wheel-app/static/js/main.92fbd2bc.chunk.js.map",
+    "runtime-main.js": "/digi-lucky-wheel-app/static/js/runtime-main.5dc8f6ca.js",
+    "runtime-main.js.map": "/digi-lucky-wheel-app/static/js/runtime-main.5dc8f6ca.js.map",
+    "static/js/2.27c21f52.chunk.js": "/digi-lucky-wheel-app/static/js/2.27c21f52.chunk.js",
+    "static/js/2.27c21f52.chunk.js.map": "/digi-lucky-wheel-app/static/js/2.27c21f52.chunk.js.map",
+    "index.html": "/digi-lucky-wheel-app/index.html",
+    "precache-manifest.6202ebac714783671afac2d6a6ac9095.js": "/digi-lucky-wheel-app/precache-manifest.6202ebac714783671afac2d6a6ac9095.js",
+    "service-worker.js": "/digi-lucky-wheel-app/service-worker.js",
+    "static/css/main.523f09c5.chunk.css.map": "/digi-lucky-wheel-app/static/css/main.523f09c5.chunk.css.map",
+    "static/js/2.27c21f52.chunk.js.LICENSE.txt": "/digi-lucky-wheel-app/static/js/2.27c21f52.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/digi-lucky-wheel-app/static/media/logo.ee7cd8ed.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5dc8f6ca.js",
+    "static/js/2.27c21f52.chunk.js",
+    "static/css/main.523f09c5.chunk.css",
+    "static/js/main.92fbd2bc.chunk.js"
+  ]
+}
