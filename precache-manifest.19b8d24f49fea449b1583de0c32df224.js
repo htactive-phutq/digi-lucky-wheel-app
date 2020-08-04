@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "353022508c21229f18ae2865925ab424",
+    "revision": "1799517974232f42a51c591826a52d03",
     "url": "/digi-lucky-wheel-app/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/digi-lucky-wheel-app/static/css/2.fc5a9450.chunk.css"
   },
   {
-    "revision": "7608f496ee29c95d39aa",
-    "url": "/digi-lucky-wheel-app/static/css/main.9eb41ec8.chunk.css"
+    "revision": "971b8d289775ebb954b3",
+    "url": "/digi-lucky-wheel-app/static/css/main.d14945e5.chunk.css"
   },
   {
     "revision": "a18e590cd1bed844863e",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/digi-lucky-wheel-app/static/js/2.753918c6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7608f496ee29c95d39aa",
-    "url": "/digi-lucky-wheel-app/static/js/main.8f5a81e3.chunk.js"
+    "revision": "971b8d289775ebb954b3",
+    "url": "/digi-lucky-wheel-app/static/js/main.2abb63d7.chunk.js"
   },
   {
     "revision": "81e6f2f064265ed90905",

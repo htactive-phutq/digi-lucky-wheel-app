@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/digi-lucky-wheel-app/static/css/main.9eb41ec8.chunk.css",
-    "main.js": "/digi-lucky-wheel-app/static/js/main.8f5a81e3.chunk.js",
-    "main.js.map": "/digi-lucky-wheel-app/static/js/main.8f5a81e3.chunk.js.map",
+    "main.css": "/digi-lucky-wheel-app/static/css/main.d14945e5.chunk.css",
+    "main.js": "/digi-lucky-wheel-app/static/js/main.2abb63d7.chunk.js",
+    "main.js.map": "/digi-lucky-wheel-app/static/js/main.2abb63d7.chunk.js.map",
     "runtime-main.js": "/digi-lucky-wheel-app/static/js/runtime-main.5dc8f6ca.js",
     "runtime-main.js.map": "/digi-lucky-wheel-app/static/js/runtime-main.5dc8f6ca.js.map",
     "static/css/2.fc5a9450.chunk.css": "/digi-lucky-wheel-app/static/css/2.fc5a9450.chunk.css",
     "static/js/2.753918c6.chunk.js": "/digi-lucky-wheel-app/static/js/2.753918c6.chunk.js",
     "static/js/2.753918c6.chunk.js.map": "/digi-lucky-wheel-app/static/js/2.753918c6.chunk.js.map",
     "index.html": "/digi-lucky-wheel-app/index.html",
-    "precache-manifest.10d28bacc4766b70b7f40ecf5c207d91.js": "/digi-lucky-wheel-app/precache-manifest.10d28bacc4766b70b7f40ecf5c207d91.js",
+    "precache-manifest.19b8d24f49fea449b1583de0c32df224.js": "/digi-lucky-wheel-app/precache-manifest.19b8d24f49fea449b1583de0c32df224.js",
     "service-worker.js": "/digi-lucky-wheel-app/service-worker.js",
     "static/css/2.fc5a9450.chunk.css.map": "/digi-lucky-wheel-app/static/css/2.fc5a9450.chunk.css.map",
-    "static/css/main.9eb41ec8.chunk.css.map": "/digi-lucky-wheel-app/static/css/main.9eb41ec8.chunk.css.map",
+    "static/css/main.d14945e5.chunk.css.map": "/digi-lucky-wheel-app/static/css/main.d14945e5.chunk.css.map",
     "static/js/2.753918c6.chunk.js.LICENSE.txt": "/digi-lucky-wheel-app/static/js/2.753918c6.chunk.js.LICENSE.txt",
     "static/media/anh1-dt.png": "/digi-lucky-wheel-app/static/media/anh1-dt.a595b427.png",
     "static/media/anh1.png": "/digi-lucky-wheel-app/static/media/anh1.f29010c1.png",
@@ -31,7 +31,7 @@
     "static/js/runtime-main.5dc8f6ca.js",
     "static/css/2.fc5a9450.chunk.css",
     "static/js/2.753918c6.chunk.js",
-    "static/css/main.9eb41ec8.chunk.css",
-    "static/js/main.8f5a81e3.chunk.js"
+    "static/css/main.d14945e5.chunk.css",
+    "static/js/main.2abb63d7.chunk.js"
   ]
 }
