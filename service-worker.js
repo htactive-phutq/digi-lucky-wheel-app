@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/digi-lucky-wheel-app/precache-manifest.2fcb8525e36337586c9f7ddc0b451a01.js"
+  "/digi-lucky-wheel-app/precache-manifest.10d28bacc4766b70b7f40ecf5c207d91.js"
 );
 
 self.addEventListener('message', (event) => {
