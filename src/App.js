@@ -1,24 +1,27 @@
-import React, { useState, useEffect, Component } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Winwheel from './Winwheel';
-import nutquayImage from "./img/controtat.png"
-import anh1 from "./img/1k.png"
-import anh2 from "./img/5k.png"
-import anh3 from "./img/10k.png"
-import anh4 from "./img/20k.png"
-import anh5 from "./img/50k.png"
-import anh6 from "./img/100k.png"
-import anh7 from "./img/200k.png"
-import anh8 from "./img/500k.png"
-import hea2 from "./img/header.png"
+import nutquayImage from "./img/start.png"
+import anh1 from "./img/anh1.png"
+import anh2 from "./img/anh2.png"
+import anh3 from "./img/anh3.png"
+import anh4 from "./img/anh4.png"
+import anh5 from "./img/anh1-dt.png"
+import anh6 from "./img/anh2-dt.png"
+import anh7 from "./img/anh3-dt.png"
+import anh8 from "./img/anh4-dt.png"
 import vietnam from "./sound/minh-beta-nghe-an-tv.mp3"
 import success from "./sound/votay.mp3"
-import { Modal, Radio, Select } from 'antd'
+import audioError from "./sound/matluot.mp3"
+import { Modal, Radio, Select, Tabs, Slider } from 'antd'
 
 const { Option } = Select;
+const { TabPane } = Tabs;
+
 let audio;
 let theWheel;
-let audioSuccess = new Audio(success)
+let audioSuccess = new Audio(success);
+let audioErr = new Audio(audioError)
 export default class App extends Component {
   state = {
     wheelSpinning: false,
@@ -33,12 +36,16 @@ export default class App extends Component {
     ],
     disabledRadio: false,
     disabledSelect: false,
-    isDisplay: "block"
+    isDisplay: "block",
+    luotquay: 3,
+    visibleErr: false,
+    list: [],
+    whCanvas: window.screen.width > 425 ? 450 : 340
   }
 
   componentDidMount() {
     theWheel = new Winwheel({
-      'outerRadius': 225, // Bán kính ngoài
+      'outerRadius':  window.screen.width > 425 ? 220 : 170, // Bán kính ngoài
       'numSegments': 8, // Số ô
       'innerRadius': 0, // Size lỗ trung tâm
       'textFontSize': 20, // Size chữ
@@ -46,63 +53,64 @@ export default class App extends Component {
       'textAlignment': 'outer', // Căn chỉnh văn bản ra bên ngoài bánh xe.
       'responsive': true,
       'drawMode': 'segmentImage', //set truyền image
-      'drawText': true,   //Hiển thị text
+      // 'drawText': true,   //Hiển thị text
+      'rotationAngle': -22,
       'segments': [{
         'fillStyle': '#910f06',
-        'text': '1.000 VNĐ',
+        'text': 'Mã số cơ hội',
         // 'size': sizeWinWheel(15),
         // 'textFontSize': 30,
         'textFillStyle': '#ffffff',
-        'image': anh1,
+        'image': window.screen.width > 425 ? anh1 : anh5,
       }, {
         'fillStyle': '#ab6f03',
-        'text': '5.000 VNĐ',
+        'text': 'Thẻ cào 100k',
         // 'size': sizeWinWheel(15),
         // 'textFontSize': 28,
         'textFillStyle': '#ffffff',
-        'image': anh2,
+        'image': window.screen.width > 425 ? anh2 : anh6,
       }, {
         'fillStyle': '#910f06',
-        'text': '10.000 VNĐ',
+        'text': '5.000.000 VNĐ',
         // 'size': sizeWinWheel(15),
         // 'textFontSize': 26,
         'textFillStyle': '#ffffff',
-        'image': anh3,
+        'image': window.screen.width > 425 ? anh3 : anh7,
       }, {
         'fillStyle': '#ab6f03',
-        'text': '20.000 VNĐ',
+        'text': 'Thẻ cào 20k',
         // 'size': sizeWinWheel(15),
         // 'textFontSize': 24,
         'textFillStyle': '#ffffff',
-        'image': anh4,
+        'image': window.screen.width > 425 ? anh4 : anh8,
       }, {
         'fillStyle': '#910f06',
-        'text': '50.000 VNĐ',
+        'text': 'Mã số cơ hội',
         // 'size': sizeWinWheel(10),
         // 'textFontSize': 22,
         'textFillStyle': '#ffffff',
-        'image': anh5,
+        'image': window.screen.width > 425 ? anh1 : anh5,
       }, {
         'fillStyle': '#ab6f03',
-        'text': '100.000 VNĐ',
+        'text': 'Thẻ cào 100k',
         // 'size': sizeWinWheel(10),
         // 'textFontSize': 20,
         'textFillStyle': '#ffffff',
-        'image': anh6,
+        'image': window.screen.width > 425 ? anh2 : anh6,
       }, {
         'fillStyle': '#910f06',
-        'text': '200.000 VNĐ',
+        'text': '5.000.000 VNĐ',
         // 'size': sizeWinWheel(10),
         // 'textFontSize': 18,
         'textFillStyle': '#ffffff',
-        'image': anh7,
+        'image': window.screen.width > 425 ? anh3 : anh7,
       }, {
         'fillStyle': '#ab6f03',
-        'text': '500.000 VNĐ',
+        'text': 'Thẻ cào 20k',
         // 'size': sizeWinWheel(10),
         // 'textFontSize': 16,
         'textFillStyle': '#ffffff',
-        'image': anh8,
+        'image': window.screen.width > 425 ? anh4 : anh8,
       }],
       'animation': // Chỉ định hình động để sử dụng.
       {
@@ -132,7 +140,8 @@ export default class App extends Component {
       visible: true,
       disabledRadio: false,
       disabledSelect: false,
-      isDisplay: "block"
+      isDisplay: "block",
+      list: [...this.state.list, indicatedSegment.text]
     })
 
   }
@@ -141,30 +150,39 @@ export default class App extends Component {
     this.setState({
       visible: false
     })
-    theWheel.rotationAngle = 0; // Đặt lại góc bánh xe về 0 độ.
+    theWheel.rotationAngle = -22; // Đặt lại góc bánh xe về 0 độ.
     theWheel.draw(); // Gọi draw để hiển thị các thay đổi cho bánh xe.
   }
 
   startSpin = () => {
-    if (!theWheel) {
-      return;
-    } else {
-      this.playSound();
-      let stopAt;
-      stopAt = this.state.valueRadio === 1 ?
-        (1 + Math.floor(Math.random() * 360)) :
-        ((this.state.valueSelect * 45) - (Math.floor(Math.random() * 45)))
-      theWheel.animation.stopAngle = stopAt;
-      theWheel.startAnimation();
-      if (this.state.wheelSpinning === false) {
-        this.setState({
-          wheelSpinning: true,
-          nutquay: nutquayImage,
-          disabledSelect: true,
-          disabledRadio: true,
-          isDisplay: "none"
-        })
+    const { luotquay } = this.state
+    if (luotquay > 0) {
+      if (!theWheel) {
+        return;
+      } else {
+        this.playSound();
+        let stopAt;
+        stopAt = this.state.valueRadio === 1 ?
+          (1 + Math.floor(Math.random() * 360)) :
+          ((this.state.valueSelect * 45) - (Math.floor(Math.random() * 45)))
+        theWheel.animation.stopAngle = stopAt;
+        theWheel.startAnimation();
+        if (this.state.wheelSpinning === false) {
+          this.setState({
+            wheelSpinning: true,
+            nutquay: nutquayImage,
+            disabledSelect: true,
+            disabledRadio: true,
+            isDisplay: "none"
+          })
+        }
       }
+      this.setState({
+        luotquay: luotquay - 1
+      })
+    } else {
+      this.errSound();
+      this.setState({ visibleErr: true })
     }
 
   }
@@ -185,24 +203,39 @@ export default class App extends Component {
     audioSuccess.play();
   }
 
+  successSound = () => {
+    // Dừng và tua lại âm thanh nếu nó đã phát.
+    audioSuccess.pause();
+    audioSuccess.currentTime = 0;
+    // Phát âm thanh.
+    audioSuccess.play();
+  }
+
+  errSound = () => {
+    // Dừng và tua lại âm thanh nếu nó đã phát.
+    audioErr.pause();
+    audioErr.currentTime = 0;
+    // Phát âm thanh.
+    audioErr.play();
+  }
+
+
   render() {
-    const { wheelSpinning, money, visible, nutquay } = this.state
+    const { wheelSpinning, money, visible, nutquay, visibleErr, luotquay, list, valueRadio, options, disabledRadio, valueSelect, disabledSelect, isDisplay, whCanvas } = this.state
     return (
       <div className="App">
-        <div className="topheader">
-          <img className="responsive" src={hea2} />
-        </div>
         <div className="inputValue">
+          <div className="luotquay">{luotquay}</div>
           <Radio.Group
-            options={this.state.options}
+            options={options}
             onChange={e => this.setState({ valueRadio: e.target.value })}
-            value={this.state.valueRadio}
+            value={valueRadio}
             optionType="button"
             buttonStyle="solid"
-            disabled={this.state.disabledRadio}
+            disabled={disabledRadio}
           />
           <div>
-            {this.state.valueRadio === 2 ?
+            {valueRadio === 2 ?
               <Select
                 showSearch
                 style={{ width: 200 }}
@@ -212,30 +245,43 @@ export default class App extends Component {
                 filterOption={(input, option) =>
                   option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
                 }
-                value={this.state.valueSelect}
-                disabled={this.state.disabledSelect}
+                value={valueSelect}
+                disabled={disabledSelect}
               >
-                <Option value={1}>1.000 VNĐ</Option>
-                <Option value={2}>5.000 VNĐ</Option>
-                <Option value={3}>10.000 VNĐ</Option>
-                <Option value={4}>20.000 VNĐ</Option>
-                <Option value={5}>50.000 VNĐ</Option>
-                <Option value={6}>100.000 VNĐ</Option>
-                <Option value={7}>200.000 VNĐ</Option>
-                <Option value={8}>500.000 VNĐ</Option>
+                <Option value={1}>Mã số cơ hội</Option>
+                <Option value={2}>Thẻ cào 100k</Option>
+                <Option value={3}>5.000.000 VNĐ</Option>
+                <Option value={4}>Thẻ cào 20k</Option>
+                <Option value={5}>Mã số cơ hội(2)</Option>
+                <Option value={6}>Thẻ cào 100k(2)</Option>
+                <Option value={7}>5.000.000 VNĐ(2)</Option>
+                <Option value={8}>Thẻ cào 20k(2)</Option>
               </Select>
               : ""}
           </div>
         </div>
         <div className="vongquay">
+
           <canvas
             id="canvas"
-            width="450"
-            height="450"
+            width={whCanvas}
+            height={whCanvas}
           >
           </canvas>
+          <div className="topheader">
+          </div>
           <div id="batdauquay" className="nutbatdau" style={{ backgroundImage: wheelSpinning && `url(${nutquay})` }}></div>
-          <div className="nutquay" onClick={this.startSpin} style={{ display: `${this.state.isDisplay}` }}></div>
+          <div className="nutquay" onClick={this.startSpin} style={{ display: `${isDisplay}` }}></div>
+        </div>
+
+        <div className="card-container">
+          <Tabs type="card">
+            <TabPane tab="Lịch sử quay" key="1">
+              {list.length > 0 ?
+                list.map((text, id) => (<p key={id}>- Bạn đã quay vào ô {text}</p>))
+                : <p>Không có dữ liệu!</p>}
+            </TabPane>
+          </Tabs>
         </div>
         <Modal
           title=""
@@ -249,6 +295,17 @@ export default class App extends Component {
           </p>
 
           <p>Hãy liên hệ với với admin để nhận giải nhé!</p>
+        </Modal>
+        <Modal
+          title=""
+          visible={visibleErr}
+          onCancel={() => this.setState({ visibleErr: false })}
+          footer={null}
+        >
+          <h3>Bạn đã hết lượt quay! </h3>
+          <p>
+            Vui lòng load lại trang để bắt đầu lại!
+          </p>
         </Modal>
       </div>
     );
