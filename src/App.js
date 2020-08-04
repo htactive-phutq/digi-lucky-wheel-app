@@ -203,14 +203,6 @@ export default class App extends Component {
     audioSuccess.play();
   }
 
-  successSound = () => {
-    // Dừng và tua lại âm thanh nếu nó đã phát.
-    audioSuccess.pause();
-    audioSuccess.currentTime = 0;
-    // Phát âm thanh.
-    audioSuccess.play();
-  }
-
   errSound = () => {
     // Dừng và tua lại âm thanh nếu nó đã phát.
     audioErr.pause();
