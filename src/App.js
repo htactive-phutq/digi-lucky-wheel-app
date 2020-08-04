@@ -218,7 +218,7 @@ export default class App extends Component {
       <div className="App">
         <div className="inputValue">
           <div className="luotquay">{luotquay}</div>
-          <Radio.Group
+          {/* <Radio.Group
             options={options}
             onChange={e => this.setState({ valueRadio: e.target.value })}
             value={valueRadio}
@@ -250,7 +250,7 @@ export default class App extends Component {
                 <Option value={8}>Thẻ cào 20k(2)</Option>
               </Select>
               : ""}
-          </div>
+          </div> */}
         </div>
         <div className="vongquay">
 
