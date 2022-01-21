@@ -268,7 +268,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <div className="item-tags">
-          <Card title="Danh sách dự thưởng" style={{ width: 300 }}>
+          <Card title="Danh sách dự thưởng" style={{ width: 300, paddingTop: 0 }}>
             <div style={{ marginBottom: 16 }}>
               <TweenOneGroup
                 enter={{
@@ -302,7 +302,7 @@ export default class App extends Component {
             )}
             {!inputVisible && (
               <Tag onClick={this.showInput} className="site-tag-plus">
-                <PlusOutlined /> New Tag
+                <PlusOutlined /> Thêm danh sách dự thưởng
               </Tag>
             )}
           </Card>
@@ -339,12 +339,13 @@ export default class App extends Component {
           visible={visible}
           onCancel={this.handleCancel}
           onOk={this.handleOk}
-          okText="Remove"
-          cancelText="Close"
+          okText="Xóa"
+          cancelText="Đóng"
+          okButtonProps={{ danger: true }}
         >
           <h3>
-            Xin chúc mừng người may mắn <b>{passNumber || ""}</b> đã trúng
-            thưởng!
+            Xin chúc mừng người may mắn
+            <b style={{ color: "red" }}> {passNumber}</b> đã trúng thưởng!
           </h3>
           <p>
             <b>Xin mời bạn lên sân khấu để nhận giải.</b>
