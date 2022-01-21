@@ -3,7 +3,7 @@
 .App {
   display: flex;
   justify-content: space-around;
-  background: url("./img/st-bg.png") no-repeat fixed center;
+  background: url("./img/stBg.png") no-repeat fixed center;
   background-position: center center;
   background-size: 100% 100%;
   font-size: 30px;

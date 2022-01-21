@@ -98,10 +98,10 @@ export default class App extends Component {
         // 'callbackSound':() => this.playSound(), // Chức năng gọi khi âm thanh đánh dấu được kích hoạt.
       },
       pins: {
-        number: 8, // Số lượng chân. Họ không gian đều xung quanh bánh xe.
+        number: this.state.tags.length, // Số lượng chân. Họ không gian đều xung quanh bánh xe.
         responsive: true,
         fillStyle: "silver",
-        outerRadius: 4,
+        outerRadius: 3,
       },
     });
     audio = new Audio(vietnam);
@@ -165,10 +165,10 @@ export default class App extends Component {
             // 'callbackSound':() => this.playSound(), // Chức năng gọi khi âm thanh đánh dấu được kích hoạt.
           },
           pins: {
-            number: 8, // Số lượng chân. Họ không gian đều xung quanh bánh xe.
+            number: this.state.tags.length, // Số lượng chân. Họ không gian đều xung quanh bánh xe.
             responsive: true,
             fillStyle: "silver",
-            outerRadius: 4,
+            outerRadius: 3,
           },
         });
       }
