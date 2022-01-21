@@ -30,8 +30,12 @@
   align-items: center;
 }
 
+.item-tags {
+  max-width: 25vw;
+}
+
 .card-container {
-  height: 500px;
+  height: 300px;
   width: 300px;
 }
 
@@ -39,7 +43,7 @@
   margin: 0;
 }
 .card-container > .ant-tabs-card .ant-tabs-content {
-  height: 500px;
+  height: 300px;
   margin-top: -16px;
 }
 .card-container > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
